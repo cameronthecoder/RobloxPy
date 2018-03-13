@@ -21,4 +21,5 @@ groupid = "1"
 print(Group.name(groupid))
 print(User.is_online(username))
 ```
+__NOTE: THE ID 1 WILL NOT BE GUARANTEED TO WORK__
 [See full list of examples here](https://github.com/Camnooten/RobloxPy/tree/master/examples)
