@@ -5,7 +5,7 @@ class User:
         r = requests.get(url)
         res = r.json()['RobloxBadges']
         return res
-    def is_onine(username):
+    def is_online(username):
         url = "https://api.roblox.com/users/get-by-username?username=" + username
         r = requests.get(url)
         res = r.json()['IsOnline']
