@@ -10,7 +10,7 @@ username = "ROBLOX"
 groupid = "1"
 
 print(robloxpy.Group.name(groupid))
-print(robloxpy.User.places(username))
+print(robloxpy.User.is_online(username))
 ```
 or..
 ```py
@@ -19,9 +19,6 @@ username = "ROBLOX"
 groupid = "1"
 
 print(Group.name(groupid))
-print(User.places(username))
+print(User.is_online(username))
 ```
-
-
-
-Source coming soon
+[See full list of examples here](https://github.com/Camnooten/RobloxPy/tree/master/examples)
