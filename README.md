@@ -1,6 +1,6 @@
 **RobloxPy**
 
-_Created by Cameron_
+An API wrapper for the ROBLOX web api.
 
 Example:
 
@@ -21,5 +21,7 @@ groupid = "1"
 print(Group.name(groupid))
 print(User.places(username))
 ```
+
+
 
 Source coming soon
