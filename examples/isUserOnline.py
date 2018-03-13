@@ -1,2 +1,2 @@
 from robloxpy import User
-User.is_onine("ROBLOX")
+User.is_online("ROBLOX")
