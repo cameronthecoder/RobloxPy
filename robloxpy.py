@@ -115,9 +115,4 @@ class Asset:
         r = requests.get(url)
         res = r.json()['Remaining']
         return res
-    def is_limited(id):
-        url = "https://api.roblox.com/Marketplace/ProductInfo?assetId=" + str(id)
-        r = requests.get(url)
-        res = r.json()['IsLimited']
-        return res
 
