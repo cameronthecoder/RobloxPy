@@ -1,4 +1,4 @@
-**RobloxPy**
+# RobloxPy
 
 An API wrapper for the ROBLOX web api.
 
@@ -22,4 +22,11 @@ print(Group.name(groupid))
 print(User.is_online(username))
 ```
 __NOTE: THE ID 1 WILL NOT BE GUARANTEED TO WORK__
-[See full list of examples here](https://github.com/Camnooten/RobloxPy/tree/master/examples)
+[See full list of examples here](https://github.com/Camnooten/RobloxPy/tree/master/examples) (soon migrating to the wiki)
+
+
+## Documentation/Examples (not done yet)
+[Wiki](https://github.com/Camnooten/RobloxPy/wiki)
+
+## Installation
+[View Wiki Guide](https://github.com/Camnooten/RobloxPy/wiki/pages/Installation)
