@@ -29,4 +29,4 @@ __NOTE: THE ID 1 WILL NOT BE GUARANTEED TO WORK__
 [Wiki](https://github.com/Camnooten/RobloxPy/wiki)
 
 ## Installation
-[View Wiki Guide](https://github.com/Camnooten/RobloxPy/wiki/pages/Installation)
+[View Wiki Guide](https://github.com/Camnooten/RobloxPy/wiki/Installation)
