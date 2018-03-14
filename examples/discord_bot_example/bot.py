@@ -2,8 +2,6 @@ import robloxpy
 import discord
 from discord.ext import commands
 bot = commands.Bot(command_prefix="-")
-
-
 @bot.command(pass_context=True)
 async def robloxasset(id):
     embed = discord.Embed(title="Roblox Asset Information")
