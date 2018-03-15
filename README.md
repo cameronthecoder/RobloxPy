@@ -1,8 +1,8 @@
 # RobloxPy
 
-An API wrapper for the ROBLOX web api.
+# An API wrapper for the ROBLOX web api.
 
-Example:
+Examples:
 
 ```py 
 import robloxpy
@@ -21,11 +21,8 @@ groupid = "1"
 print(Group.name(groupid))
 print(User.is_online(username))
 ```
-__NOTE: THE ID 1 WILL NOT BE GUARANTEED TO WORK__
-[See full list of examples here](https://github.com/Camnooten/RobloxPy/tree/master/examples) (soon migrating to the wiki)
 
-
-## Documentation/Examples (not done yet)
+## Documentation/Examples 
 [Wiki](https://github.com/Camnooten/RobloxPy/wiki)
 
 ## Installation
