@@ -1,4 +1,7 @@
 import requests
+# These are all GET requests from the Roblox Web API
+# API: http://wiki.roblox.com/index.php?title=Web_APIs
+# API Wrapper made by Cameron
 class User:
     def badges(id):
         url = "https://www.roblox.com/badges/roblox?userId=" + str(id)
@@ -19,6 +22,11 @@ class User:
         url = "https://api.roblox.com/users/get-by-username?username=" + username
         r = requests.get(url)
         res = r.json()['success']
+        return res
+    def friend_count(id):
+        url = "https://www.roblox.com/friends/json?userId=" + str(id) + "&currentPage=0&pageSize=20&imgWidth=110&imgHeight=110&imgFormat=jpeg&friendsType=BestFriends"
+        r = requests.get(url)
+        res = r.json()['TotalFriends']
         return res
 class Group:
     def description(id):
@@ -49,6 +57,11 @@ class Asset:
         url = "https://api.roblox.com/Marketplace/ProductInfo?assetId=" + str(id)
         r = requests.get(url)
         res = r.json()['Creator']['Name']
+        return res
+    def is_public(id):
+        url = "https://api.roblox.com/Marketplace/ProductInfo?assetId=" + str(id)
+        r = requests.get(url)
+        res = r.json()['PublicDomain']
         return res
     def product_id(id):
         url = "https://api.roblox.com/Marketplace/ProductInfo?assetId=" + str(id)
@@ -115,4 +128,30 @@ class Asset:
         r = requests.get(url)
         res = r.json()['Remaining']
         return res
-
+class Image:
+    '''Get an image of a torso, head,, outfit, or asset'''
+    def get_torso_thumbnail(id):
+        url = "https://www.roblox.com/bust-thumbnail/json?userId=" + str(id) + "&height=180&width=180"
+        r = requests.get(url)
+        res = r.json()['Url']
+        return res
+    def get_head_thumbnail(id):
+        url = "https://www.roblox.com/headshot-thumbnail/json?userId=" + str(id) + "&height=180&width=180"
+        r = requests.get(url)
+        res = r.json()['Url']
+        return res
+    def get_outfit_thumbnail(id):
+        url = "https://www.roblox.com/outfit-thumbnail/json?userId=" + str(id) + "&height=180&width=180"
+        r = requests.get(url)
+        res = r.json()['Url']
+        return res
+    def get_asset_thumbnail(id):
+        url = "https://www.roblox.com/Thumbs/Asset.ashx?width=110&height=110&assetId=" + str(id)
+        r = requests.get(url)
+        res = r.json()['Url']
+        return res
+class Friends:
+    def are_user_friendship(id1, id2):
+        print("not done yet")
+    def are_users_best_friends(id1, id2):
+        print("not done yet")
