@@ -19,7 +19,7 @@ class User:
         res = r.json()['Id']
         return res
     def does_user_exist(username):
-        url = "https://api.roblox.com/users/get-by-username?username=" + username
+        url = "https://www.roblox.com/UserCheck/DoesUsernameExist?username=" + username
         r = requests.get(url)
         res = r.json()['success']
         return res
@@ -58,10 +58,15 @@ class Asset:
         r = requests.get(url)
         res = r.json()['Creator']['Name']
         return res
+    def creator_id(id):
+        url = "https://api.roblox.com/Marketplace/ProductInfo?assetId=" + str(id)
+        r = requests.get(url)
+        res = r.json()['Creator']['Id']
+        return res
     def is_public(id):
         url = "https://api.roblox.com/Marketplace/ProductInfo?assetId=" + str(id)
         r = requests.get(url)
-        res = r.json()['PublicDomain']
+        res = r.json()['IsPublicDomain']
         return res
     def product_id(id):
         url = "https://api.roblox.com/Marketplace/ProductInfo?assetId=" + str(id)
@@ -128,6 +133,10 @@ class Asset:
         r = requests.get(url)
         res = r.json()['Remaining']
         return res
+    def thumbnail(id):
+        url = "https://www.roblox.com/Thumbs/Asset.ashx?width=110&height=110&assetId=" + str(id)
+        r = requests.get(url, allow_redirects=True)
+        return r.url
 class Image:
     '''Get an image of a torso, head,, outfit, or asset'''
     def get_torso_thumbnail(id):
@@ -150,6 +159,10 @@ class Image:
         r = requests.get(url)
         res = r.json()['Url']
         return res
+    def get_big_asset_thumbnail(id):
+        url = "https://www.roblox.com/Thumbs/Asset.ashx?width=200&height=200&assetId=" + str(id)
+        r = requests.get(url, allow_redirects=True)
+        return r.url
 class Friends:
     def are_user_friendship(id1, id2):
         print("not done yet")
