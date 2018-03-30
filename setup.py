@@ -6,6 +6,6 @@ setup(name='robloxpy',
       author='Cameron',
       author_email='camnooten@gmail.com',
       license='MIT',
-      packages=['src'],
+      packages=['RobloxPy'],
       install_requires=['requests'],
       zip_safe=False)
